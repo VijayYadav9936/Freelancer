@@ -1,0 +1,53 @@
+.container {
+    padding: 16px;
+    max-height: 100%;
+    overflow-y: scroll;
+    display: block;
+	position: relative;
+  background-color: white;
+}
+
+.greeting {
+    font-size: 2rem;
+    font-weight: 400;
+    color: darkslategray;
+}
+
+.greeting:hover {
+    background-color: whitesmoke;
+}
+
+.time {
+    font-size: 2rem;
+    font-weight: 400;
+       color: darkslategray;
+}
+
+.day {
+    font-size: 2rem;
+    font-weight: 400;
+       color: darkslategray;
+}
+
+.time:hover {
+   background-color: whitesmoke;
+}
+
+.Homepage{
+	width: 100%;
+  padding: 1rem;
+}
+
+.Homepage:hover {
+	opacity: 0.9;
+}
+
+.HomeText{
+  font-size: 1rem;
+background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  position: relative;
+  padding: 1rem;
+}
