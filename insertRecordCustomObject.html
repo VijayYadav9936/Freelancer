@@ -1,0 +1,69 @@
+<template>
+    <lightning-button variant="success" label="Client" title="Client Requirement" onclick={showSearch}>
+    </lightning-button>
+    <template if:true={show}>
+        <lightning-card title="Client Requirements">
+            <div class="slds-wrap slds-grid">
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                    <p>
+                        <lightning-input label="Name" type="text" value={clientObjName} name="clientName"
+                            onchange={clientHandleChange}></lightning-input>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                    <p>
+                        <lightning-input label="Email" type="email" value={clientObjEmail} name="clientEmail"
+                            onchange={clientHandleChange}></lightning-input>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                    <p>
+                        <lightning-input label="Experience" type="number" value={clientObjExperience}
+                            name="clientExperience" onchange={clientHandleChange}></lightning-input>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                    <p>
+                        <lightning-input label="Feedback" type="text" value={clientObjFeedback} name="clientFeedback"
+                            onchange={clientHandleChange}></lightning-input>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                    <p>
+                        <lightning-input label="Skills" type="text" value={clientObjSkills} name="clientSkills"
+                            onchange={clientHandleChange}></lightning-input>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                    <p>
+                        <lightning-input label="Project Cost" type="number" value={clientObjProjectCost}
+                            name="clientProjectCost" onchange={clientHandleChange}></lightning-input>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                    <p>
+                        <lightning-input label="Project Description" type="text" value={clientObjProjectDescription}
+                            name="clientProjectDescription" onchange={clientHandleChange}></lightning-input>
+                    </p>
+                </div>
+
+                <br /><br />
+            </div>
+
+            <div class="slds-text-align--center slds-m-top--medium" style="text-align:center; width:40px; margin:auto;">
+                <lightning-button type="brand" label="Submit" variant="brand" size="small" onclick={submitAction}>
+                </lightning-button>
+            </div>
+
+            <div style="height: 300px;">
+                <lightning-datatable key-field="id" data={data} columns={columns}>
+                </lightning-datatable>
+            </div>
+
+            <lightning-button variant="Neutral" label="Add Developers" title="Add Developers" onclick={assignDevelopers}
+                icon-name="utility:check">
+            </lightning-button>
+
+        </lightning-card>
+        </template>
+    </template>
